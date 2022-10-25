@@ -42,7 +42,7 @@ for (let item of iogms) {
     a.onclick = function(e) {
         if (e.target == a || e.target.tagName != "A") {
             e.preventDefault();
-            item.custom ? goProx[item.custom](true) : goFrame("/assets/g/archive/g/" + item.path, item.nolag);
+            item.custom ? goProx[item.custom](true) : goFrame("/assets/games/h5gms/" + item.path, item.nolag);
         }
     }
 

@@ -34,8 +34,8 @@ routerget('/h', 'html/games/html5.html');
 routerget('/el', 'html/games/emulators.html');
 routerget('/m', 'html/games/emulib.html');
 routerget('/f', 'html/games/flash.html');
-routerget('/fg', 'assets/g/archive/gfiles/flash/index.html');
-routerget('/eg', 'assets/g/archive/gfiles/rarch/index.html');
+routerget('/fg', 'assets/games/gfiles/flash/index.html');
+routerget('/eg', 'assets/games/gfiles/rarch/index.html');
 routerget('/s', 'html/games/frame.html');
 routerget('/q', 'html/games/html5.html');
 

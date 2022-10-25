@@ -1,0 +1,6 @@
+[submodule "views/assets/games/h5gms"]
+	path = views/assets/games/h5gms
+	url = https://github.com/M0rgits/h5gms
+[submodule "views/assets/games/gfiles"]
+	path = views/assets/games/gfiles
+	url = https://github.com/M0rgits/gfiles
