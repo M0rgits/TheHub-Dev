@@ -1,4 +1,4 @@
-const crazygames = document.getElementById('crzygms');
+
 const domain = window.location.hostname;
 
 

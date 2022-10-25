@@ -38,7 +38,7 @@ routerget('/fg', 'assets/games/gfiles/flash/index.html');
 routerget('/eg', 'assets/games/gfiles/rarch/index.html');
 routerget('/s', 'html/games/frame.html');
 routerget('/q', 'html/games/html5.html');
-
+routerget('/li', 'html/links.html');
 
 server.listen(port);
 
