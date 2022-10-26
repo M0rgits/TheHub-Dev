@@ -1,4 +1,11 @@
 
+async function uvsend(x){
+  const encoded = btoa(x)
+  const url = `https://ultraviolet-url-3.m0rgits.repl.co//?url=${encoded}`;
+  window.location.href = url;
+};
+
+
 function goFrame(url) {
     localStorage.setItem("huframesrc", url + '/index.html');
     window.location.href = '/s'
@@ -17,6 +24,10 @@ function goToUrl(url, stealth, nolag) {
 
 var h5gms = [
   //io games
+  { name: "Sort The Court", path: "sort-the-court/", img: "stc.png", description: "Classic Sort The Court ported to Html5" },
+  { name: "Plants vs Zombies", path: "pvzjs/", img: "pvzjs.png", description: "Plants vs Zombies ported to JS (In Chinese....... sorry)" },
+  { name: "Among Us", custom: "now.gg/apps/innersloth-llc/4047/among-us.html", prox: "true", img: "amongus.png", description: "I Thought Roblox Was Bad..........." },
+  { name: "Roblox", custom: "https://mathsspot.com/play/5349", img: "roblox.png", description: "well........ Roblox i guess" },
   { name: "ZombsRoyale-io", path: "zombs/", img: "zombs.png", description: "Zombs Royale is a multiplayer survival game set in a Battle Royale arena. As with many Battle Royale games, you join the deadly battlefield via parachute and scramble around looking for resources and comradery with other players." },
   { name: "Snake-io", path: "snakeio/", img: "snakeio.png", description: "Snake.io is a multiplayer game where you must slither and survive as long as possible." },
   { name: "Funny Shooter 2", path: "funny/", img: "funny.png", description: "Funny Shooter 2 is a fun FPS game where you fight hordes of absurd enemies! Use various weapons to slay these bizarre beings and upgrade your weapons arsenal as you progress." },
@@ -97,7 +108,15 @@ for (let item of h5gms) {
     a.onclick = function(e) {
         if (e.target == a || e.target.tagName != "A") {
             e.preventDefault();
-            item.custom ? goProx[item.custom](true) : goFrame("assets/games/h5gms/" + item.path, item.nolag);
+            if (item.hasOwnProperty('custom')){
+             if (item.prox === 'true'){
+               uvsend(item.custom)
+             }
+            else
+              window.location.href = item.custom; 
+            } 
+          else
+          goFrame("assets/games/h5gms/" + item.path, item.nolag);
         }
     }
 

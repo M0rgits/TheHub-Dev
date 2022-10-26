@@ -18,6 +18,7 @@ function goToUrl(url, stealth, nolag) {
 
 
 var emulibgms = [
+    {name: "Ghost n' Goblins", core: "nestopia", rom: "gng.nes", img: "gng.png", description: "Melt your brain cells trying to beat this game :)"},
     {name: "Fire Emblem", core: "mgba", rom: "fireemblem.gba", img: "fireemblem.png", description: "Destroy your enemies in this tactical role-playing game!"},
     {name: "Final Fantasy 3", core: "snes9x", rom: "finalfantasy3.sfc", img: "finalfantasy3.png", description: "Action role-playing game, known as FF IV outside of the US."},
     {name: "Earthbound", core: "snes9x", rom: "earthbound.sfc", img: "earthbound.png", description: "what"},

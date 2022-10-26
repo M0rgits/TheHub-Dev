@@ -2,15 +2,8 @@ import http from 'http';
 import path from 'path';
 import express from 'express';
 import fs from 'fs';
-import multer from 'multer';
-import { readFile } from 'fs/promises';
-import pkg from './routes.mjs';
-import { paintSource, tryReadFile } from './randomization.mjs';
-const config = JSON.parse(await readFile(new URL('./config.json',
-    import.meta.url)));
-const { pages } = pkg;
 const __dirname = path.resolve();
-const port = process.env.PORT || config.port;
+const port = process.env.PORT || 8080;
 const app = express();
 const router = express.Router();
 const server = http.createServer(app);
