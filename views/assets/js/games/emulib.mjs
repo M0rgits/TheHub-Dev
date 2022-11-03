@@ -4,7 +4,6 @@
 /* EmuLibrary gnav
 /* ----------------------------------------------- */
 
-
 function goToUrl(url, stealth, nolag) {
     if (stealth) {
         goFrame(url, nolag);
@@ -60,7 +59,7 @@ var emulibgms = [
     {name: "Super Mario Advance 2", core: "mgba", rom: "supermarioadvance2.gba", img: "supermarioadvance2.png", description: "Super Mario World comes to the GBA."},
     {name: "Super Mario Advance 3", core: "mgba", rom: "supermarioadvance3.gba", img: "supermarioadvance3.png", description: "Yoshi's Island comes to the GBA."},
     {name: "Super Mario Advance 4", core: "mgba", rom: "supermarioadvance4.gba", img: "supermarioadvance4.png", description: "Super Mario Bros. 3 comes to the GBA."}
-];
+]
 
 var glist = document.getElementById("glist");
 
@@ -86,3 +85,8 @@ for (let item of emulibgms) {
 
     glist.appendChild(a);
 }
+
+
+
+
+
