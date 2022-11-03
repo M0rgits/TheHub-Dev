@@ -3,10 +3,7 @@
 /* MIT license: http://opensource.org/licenses/MIT
 /* EmuLibrary gnav
 /* ----------------------------------------------- */
-function goFrame(url, nolag) {
-    localStorage.setItem("huframesrc", url);
-    window.location.href = '/eg'
-}
+
 
 function goToUrl(url, stealth, nolag) {
     if (stealth) {
@@ -18,6 +15,7 @@ function goToUrl(url, stealth, nolag) {
 
 
 var emulibgms = [
+    {name: "SpongeBob Atlantis Squarepantis", core: "melonds", rom: "sponge.nds", img: "sponge.png", description: "How could you miss this absolute masterpiece of a game?"},
     {name: "Ghost n' Goblins", core: "nestopia", rom: "gng.nes", img: "gng.png", description: "Melt your brain cells trying to beat this game :)"},
     {name: "Fire Emblem", core: "mgba", rom: "fireemblem.gba", img: "fireemblem.png", description: "Destroy your enemies in this tactical role-playing game!"},
     {name: "Final Fantasy 3", core: "snes9x", rom: "finalfantasy3.sfc", img: "finalfantasy3.png", description: "Action role-playing game, known as FF IV outside of the US."},
@@ -82,7 +80,7 @@ for (let item of emulibgms) {
     a.onclick = function(e) {
         if (e.target == a || e.target.tagName != "A") {
             e.preventDefault();
-            goFrame("/?eg&core=" + item.core + "&rom=" + item.rom, true);
+            window.location.href = '/eg?core=' + item.core + '&rom=' + item.rom;
         }
     }
 

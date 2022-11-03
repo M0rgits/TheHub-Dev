@@ -24,6 +24,7 @@ function goToUrl(url, stealth, nolag) {
 
 var h5gms = [
   //io games
+  { name: "Angry Birds", path: "AngryBirds/", img: "angrybirds.png", description: "Angry Birds maybe? (i didnt test it)" },
   { name: "Sort The Court", path: "sort-the-court/", img: "stc.png", description: "Classic Sort The Court ported to Html5" },
   { name: "Plants vs Zombies", path: "pvzjs/", img: "pvzjs.png", description: "Plants vs Zombies ported to JS (In Chinese....... sorry)" },
   { name: "Among Us", custom: "now.gg/apps/innersloth-llc/4047/among-us.html", prox: "true", img: "amongus.png", description: "I Thought Roblox Was Bad..........." },
