@@ -1,0 +1,75 @@
+<meta name="valid">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <html lang="en-US">
+    <meta name="keywords" content="proxy, themainhub, games, minecraft, unblocked, emulators, unblocked games"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HomePage</title>
+    <meta name="description" content="The main page for TheMainHub Gaming and Proxy network">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e">
+    <meta name="googlebot" content="index, follow, snippet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">function x(){
+      let x = getCookie('visit');
+      let y = makeid(12);
+      if(x != 'true'){
+        setCookie('visit', 'true', 365);
+        setCookie('uid', y, 365);
+        let z = getCookie('uid');
+        senduid(z);
+      }
+      }</script>
+</head>
+
+<body onload='x()'>
+    <!-- IMPORTANT-HUCOOKINGINSERT-DONOTDELETE -->
+  <div id="header" class="fullwidth">
+    <ul class="navbar">
+      <li>
+	      <a href="/li">Links</a>
+        <a href="/uv">Pr&#173;o&#173;xy</a>
+	      <a href="/g">G&#173;ame&#173; H&#173;ub</a>
+	      <a href="/frm">Ga&#173;me R&#173;equ&#173;est</a>
+      </li>
+    </ul>
+  </div>      
+  <div id="main" class="box-home text-center">
+    <h1>Welcome to TheHub</h1>
+    <h1>Cen&#173;sorsh&#173;ip Is No More!</h1>
+      <a class="hovermessage buttonlink startbutton" href="/g" data-hover-text="Epic!">Ga<wbr>m<wbr>e<wbr> Cat<wbr>al<wbr>og</a>
+      <a class="hovermessage buttonlink startbutton" href="/c" data-hover-text="Epic!">ChangeLog</a>
+  </div>
+  <div id="scrollfix">&#173;<br>&#173;</div>
+  <script src='assets/js/common.js'></script>
+  <script type="text/javascript">
+    async function change(){
+      await $.get('/request/changes', function(data) {
+        console.log(data)
+        if(data === 'changed'){
+          $.get('/c', function(html) {
+            const template = document.createElement('div');
+            template.innerHTML = html;
+            document.body.appendChild(template)
+            const close = document.getElementById('close');
+            close.addEventListener('click', async (event) => {
+              event.preventDefault();
+              document.getElementById('changelog').style.display = 'none'
+              document.getElementById('main').style.display = ''
+            })
+              document.getElementById('main').style.display = 'none';
+          })
+        }
+      })
+    }
+    change();
+  </script>
+</body>
+
+</html>

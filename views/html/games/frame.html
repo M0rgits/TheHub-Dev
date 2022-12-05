@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<html lang="en-US">
+	<meta name="keywords" content="proxy, themainhub, games, minecraft, unblocked, emulators, unblocked games" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>TheHub</title>
+	<meta name="description" content="Page to display game that is selected">
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<!-- Arc widget causes lag on some gams, so it is created by js below if &nolag isn't specified in the querystring -->
+</head>
+
+<body>
+	<!-- IMPORTANT-HUCOOKINGINSERT-DONOTDELETE -->
+  <div class='holder'>
+	  <iframe id="frame" allow="fullscreen" autofocus></iframe>
+  </div>
+	<script>
+	var search = decodeURIComponent(window.location.search).substring(1).split("&");
+	var queries = {};
+	for(var i = 0; i < search.length; i++) {
+		var p = search[i].split("=");
+		queries[p[0]] = p[1];
+	}
+	document.getElementById("frame").src = localStorage.getItem("huframesrc");
+	// make arc widget if nolag isn't specified
+	/*if (!queries.hasOwnProperty("nolag")) {
+		var arcw = document.createElement("script");
+		arcw.setAttribute("async", "");
+		arcw.src = "https://arc.io/widget.min.js#2BzvQ1em";
+		document.head.appendChild(arcw);
+	}
+	*/
+	</script>
+	<script src="uv.bundle.js"></script>
+	<script src="uv.config.js"></script>
+	<script src="assets/js/csel.js"></script>
+</body>
+
+</html>
